@@ -94,4 +94,15 @@ function  showWinningLine(winningCombination){
         line.classList.add('eighth')
       }      
 }
+
+function resetGame() {
+  const cells = document.getElementsByClassName('cell')
+  Array.from(cells).forEach((cell) => {
+    cell.textContent = ''
+  });
+  selectedNumbers = {};
+  line.classList = 'line'
+}
+
 board.addEventListener('click', handleClickOnBoard)
+resetGameButton.addEventListener('click', resetGame)
