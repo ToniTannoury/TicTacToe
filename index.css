@@ -62,4 +62,46 @@
   z-index: +1;
   margin-top:45px;
 }
+.line.first{
+  background-color: red;
+}
+.line.second{
+  background-color: red;
+  margin-top:165px;
+}
+.line.third{
+  background-color: red;
+  margin-top:285px;
+}
+.line.fourth{
+  background-color: red;
+  margin-top:158px;
+  transform: rotate(45deg);
+  width: 400px;
+  left: -35px;
+}
+.line.fifth{
+  background-color: red;
+  margin-top:158px;
+  transform: rotate(135deg);
+  width: 400px;
+  left: -27px;
+}
+.line.sixth{
+  background-color: red;
+  margin-top:158px;
+  transform: rotate(90deg);
+}
+.line.seventh{
+  background-color: red;
+  margin-top:158px;
+  transform: rotate(90deg);
+  left: -109px;
+}
+.line.eighth{
+  background-color: red;
+  margin-top:158px;
+  transform: rotate(90deg);
+  left: 131px;
+}
 

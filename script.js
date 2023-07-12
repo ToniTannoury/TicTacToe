@@ -37,10 +37,13 @@ function checkWin(playerNumbers) {
 
 function handleClickOnBoard(e) {
   if(e.target.id === "line"){
+    console.log(1)
     return
   }
   const cell = e.target
-  if (!cell.textContent) {
+  console.log(cell.id)
+  if (!cell.textContent && !checkWin(selectedNumbers[player])) {
+    
     if(player === 1){
       cell.textContent = "X"
     }else{
@@ -56,9 +59,9 @@ function handleClickOnBoard(e) {
       console.log('Player', player, 'wins!')
       line.classList = 'line'
       updateScoreboard(player)
+      showWinningLine(winningCombination)
       return
     }
-  
     if(player === 1){
       player = 2
     }else{
@@ -72,5 +75,23 @@ function updateScoreboard(player) {
   const currentScore = +(playerScoreElement.textContent.split(':')[1])
   playerScoreElement.textContent = `Player ${player}: ${currentScore + 1}`
 }
-
+function  showWinningLine(winningCombination){
+  if (winningCombination[0] === 1 && winningCombination[2] === 3) {
+        line.classList.add('first')
+      } else if (winningCombination[0] === 4 && winningCombination[2] === 6) {
+        line.classList.add('second')
+      } else if (winningCombination[0] === 7 && winningCombination[2] === 9) {
+        line.classList.add('third')
+      } else if (winningCombination[0] === 1 && winningCombination[2] === 9) {
+        line.classList.add('fourth')
+      } else if (winningCombination[0] === 3 && winningCombination[2] === 7) {
+        line.classList.add('fifth')
+      } else if (winningCombination[0] === 2 && winningCombination[2] === 8) {
+        line.classList.add('sixth')
+      } else if (winningCombination[0] === 1 && winningCombination[2] === 7) {
+        line.classList.add('seventh')
+      } else if (winningCombination[0] === 3 && winningCombination[2] === 9) {
+        line.classList.add('eighth')
+      }      
+}
 board.addEventListener('click', handleClickOnBoard)
