@@ -15,6 +15,7 @@
   background-color: red;
   margin: auto;
 }
+
 .cell {
   width: 100px;
   height: 100px;
@@ -24,4 +25,20 @@
   font-size: 50px;
   cursor: pointer;
   background-color: wheat;
+}
+
+#scoreBoard{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 200px;
+  font-size: 36px;
+  font-style: italic;
+  margin-bottom:50px ;
+}
+
+.scoreTitle,.headTitle{
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 900;
 }
