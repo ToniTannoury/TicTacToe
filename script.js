@@ -71,9 +71,9 @@ function handleClickOnBoard(e) {
 }
 
 function updateScoreboard(player) {
-  const playerScoreElement = document.getElementById(`player${player}Score`)
+  const playerScoreElement = document.getElementById('player' + player + 'Score')
   const currentScore = +(playerScoreElement.textContent.split(':')[1])
-  playerScoreElement.textContent = `Player ${player}: ${currentScore + 1}`
+  playerScoreElement.textContent = 'Player ' + player + ': ' + (currentScore + 1)
 }
 function  showWinningLine(winningCombination){
   if (winningCombination[0] === 1 && winningCombination[2] === 3) {
