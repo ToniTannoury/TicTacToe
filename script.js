@@ -104,5 +104,14 @@ function resetGame() {
   line.classList = 'line'
 }
 
+function resetScores() {
+  const player1ScoreElement = document.getElementById('player1Score')
+  const player2ScoreElement = document.getElementById('player2Score')
+  player1ScoreElement.textContent = "Player 1: 0"
+  player2ScoreElement.textContent = "Player 2: 0"
+  resetGame()
+}
+
 board.addEventListener('click', handleClickOnBoard)
 resetGameButton.addEventListener('click', resetGame)
+resetScoresButton.addEventListener('click', resetScores)
