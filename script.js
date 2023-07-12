@@ -55,6 +55,7 @@ function handleClickOnBoard(e) {
     if (winningCombination) {
       console.log('Player', player, 'wins!')
       line.classList = 'line'
+      updateScoreboard(player)
       return
     }
   
@@ -65,4 +66,11 @@ function handleClickOnBoard(e) {
     }
   }
 }
+
+function updateScoreboard(player) {
+  const playerScoreElement = document.getElementById(`player${player}Score`)
+  const currentScore = +(playerScoreElement.textContent.split(':')[1])
+  playerScoreElement.textContent = `Player ${player}: ${currentScore + 1}`
+}
+
 board.addEventListener('click', handleClickOnBoard)
